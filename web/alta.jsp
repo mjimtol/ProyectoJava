@@ -9,7 +9,7 @@
 <html>
     
           <%
-              
+              //Llamada a funcion alta pasando id
             int id = Integer.parseInt(request.getParameter("id"));
             Alta alt = new Alta();
             String resul = alt.darAlta(id);  
