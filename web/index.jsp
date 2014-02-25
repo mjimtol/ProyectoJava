@@ -15,8 +15,8 @@
     <body>        
         <div class="contenedor">
             
-            <form action="index.jsp" method="POST">
-                <select id="S_Tipo">
+           <form action="index.jsp" method="POST">
+                <select name="STipo">
                     <option value="0">Todos</option>
                     <option value="1">Teatro</option>
                     <option value="2">Conciertos</option>
@@ -28,8 +28,8 @@
             
             <%
             LinkedList<Inicio> lista;
-            String tipo = request.getParameter("S_Tipo");
-            out.println(tipo);
+            String tipo = request.getParameter("STipo");
+            //out.println(tipo);
             if (tipo == null)
                 lista = Consulta.getEventos(0);
             else
@@ -40,14 +40,15 @@
                out.println("<br>");
                out.println("<a href='detalles.jsp?id="+ lista.get(i).getId_evento()+"'>");
                out.println("<article>");
-               out.println("<b>" + lista.get(i).getId_evento()+". ");
+               //out.println("<b>" + lista.get(i).getId_evento()+". ");
+               out.println("<b>" + (i+1) +". ");
                out.println(lista.get(i).getNombre() + "</b><br>");
                out.println(lista.get(i).getTipo());
                out.println("</article>");   
                out.println("</a>");
             }
             %>
-              
+
         </div>
     </body>
 </html>
