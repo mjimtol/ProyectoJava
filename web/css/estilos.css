@@ -1,0 +1,32 @@
+.contenedor
+{
+    width:90%;
+    margin: 0 auto;
+    text-align:center;
+    background-color: #E6E6E6;
+}
+
+article
+{
+    width:80%;
+    background-color: #0174DF;
+    border-radius: 10px;
+    padding: 5px;   
+    margin: 0 auto;
+}
+
+article:active
+{
+    background-color: #66ff66;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+img
+{
+    width:80%;
+}
